@@ -3,260 +3,242 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Daily AI Digest - July 19, 2026</title>
+<title>Daily AI Digest — July 20, 2026</title>
 <style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background: #0a0a0f; color: #e0e0e0; line-height: 1.6; }
-  .container { max-width: 800px; margin: 0 auto; padding: 20px; }
-  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid #1e1e2e; margin-bottom: 30px; }
-  .header h1 { font-size: 2.2em; color: #fff; margin-bottom: 6px; }
-  .header .subtitle { color: #888; font-size: 0.95em; }
-  .header .date { color: #00c8ff; font-size: 0.85em; margin-top: 4px; }
-  .section { margin-bottom: 32px; }
-  .section-title { font-size: 1.25em; color: #00c8ff; border-left: 3px solid #00c8ff; padding-left: 12px; margin-bottom: 16px; }
-  .card { background: #12121a; border: 1px solid #1e1e2e; border-radius: 10px; padding: 18px 20px; margin-bottom: 14px; transition: border-color 0.2s; }
-  .card:hover { border-color: #00c8ff33; }
-  .card h3 { color: #fff; font-size: 1.05em; margin-bottom: 6px; }
-  .card .meta { color: #666; font-size: 0.78em; margin-bottom: 8px; }
-  .card p { color: #b0b0b0; font-size: 0.9em; }
-  .card .tag { display: inline-block; background: #00c8ff15; color: #00c8ff; font-size: 0.7em; padding: 2px 8px; border-radius: 4px; margin-right: 4px; }
-  .pricing-table { width: 100%; border-collapse: collapse; margin-top: 8px; }
-  .pricing-table th, .pricing-table td { padding: 8px 10px; text-align: left; border-bottom: 1px solid #1e1e2e; font-size: 0.85em; }
-  .pricing-table th { color: #888; font-weight: 500; font-size: 0.78em; text-transform: uppercase; letter-spacing: 0.5px; }
-  .pricing-table td { color: #ccc; }
-  .pricing-table tr:hover td { background: #181825; }
-  .price-green { color: #4ade80; }
-  .price-blue { color: #60a5fa; }
-  .price-purple { color: #a78bfa; }
-  .price-yellow { color: #fbbf24; }
-  .price-red { color: #f87171; }
-  .footer { text-align: center; color: #555; font-size: 0.8em; padding: 30px 0; border-top: 1px solid #1e1e2e; margin-top: 30px; }
-  .highlight-box { background: #181825; border: 1px solid #2a2a3e; border-radius: 10px; padding: 16px 20px; margin-bottom: 14px; }
-  .highlight-box h3 { color: #fbbf24; font-size: 1em; margin-bottom: 4px; }
-  .highlight-box .big-number { font-size: 2em; font-weight: 700; color: #fff; }
-  .highlight-box .big-number .unit { font-size: 0.5em; color: #888; }
-  .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-bottom: 14px; }
-  .stat-card { background: #12121a; border: 1px solid #1e1e2e; border-radius: 8px; padding: 14px; text-align: center; }
-  .stat-card .value { font-size: 1.4em; font-weight: 700; color: #fff; }
-  .stat-card .label { color: #888; font-size: 0.78em; margin-top: 2px; }
-  .badge { display: inline-block; background: #2a2a3e; color: #aaa; font-size: 0.7em; padding: 2px 8px; border-radius: 4px; margin-right: 4px; }
-  .badge-openai { background: #1a3a2a; color: #4ade80; }
-  .badge-anthropic { background: #2a1a3a; color: #c084fc; }
-  .badge-xai { background: #3a2a1a; color: #fbbf24; }
-  .badge-google { background: #1a2a3a; color: #60a5fa; }
-  .badge-meta { background: #1a3a3a; color: #2dd4bf; }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,sans-serif;background:#0d1117;color:#e6edf3;line-height:1.6;padding:0}
+  .container{max-width:800px;margin:0 auto;padding:20px}
+  .header{text-align:center;padding:40px 20px 30px;background:linear-gradient(135deg,#0d1117 0%,#161b22 100%);border-bottom:1px solid #30363d}
+  .header h1{font-size:2.2rem;margin-bottom:6px;background:linear-gradient(90deg,#58a6ff,#bc8cff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+  .header .sub{color:#8b949e;font-size:0.95rem}
+  .header .date-badge{display:inline-block;margin-top:10px;padding:4px 14px;border-radius:20px;background:#21262d;border:1px solid #30363d;color:#58a6ff;font-size:0.85rem;font-weight:600}
+  .section-title{font-size:1.25rem;font-weight:700;color:#f0f6fc;margin:30px 0 16px;padding-bottom:8px;border-bottom:2px solid #21262d;display:flex;align-items:center;gap:8px}
+  .section-title .emoji{font-size:1.3rem}
+  .card{background:#161b22;border:1px solid #30363d;border-radius:12px;padding:20px;margin-bottom:16px;transition:border-color 0.2s}
+  .card:hover{border-color:#58a6ff}
+  .card h3{font-size:1.1rem;font-weight:600;color:#f0f6fc;margin-bottom:8px;line-height:1.4}
+  .card h3 a{color:#58a6ff;text-decoration:none}
+  .card h3 a:hover{text-decoration:underline;color:#79c0ff}
+  .card .meta{font-size:0.8rem;color:#8b949e;margin-bottom:8px;display:flex;gap:12px;flex-wrap:wrap}
+  .card .meta .source{color:#58a6ff;font-weight:500}
+  .card .meta .tag{background:#1f2937;padding:2px 8px;border-radius:4px;color:#8b949e;font-size:0.75rem}
+  .card p{color:#c9d1d9;font-size:0.95rem;line-height:1.6}
+  .card .key-points{margin-top:10px;padding:10px 14px;background:#0d1117;border-radius:8px;border-left:3px solid #58a6ff}
+  .card .key-points li{color:#c9d1d9;font-size:0.9rem;margin-bottom:4px;list-style:none;padding-left:16px;position:relative}
+  .card .key-points li::before{content:"▸";position:absolute;left:0;color:#58a6ff}
+  .pricing-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px;margin:0 0 10px}
+  .pricing-card{background:#0d1117;border:1px solid #21262d;border-radius:8px;padding:10px 14px;font-size:0.85rem}
+  .pricing-card .provider{font-weight:700;color:#f0f6fc;font-size:0.8rem;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:4px}
+  .pricing-card .model-name{color:#58a6ff;font-weight:600}
+  .pricing-card .price{color:#c9d1d9;font-size:0.8rem;margin-top:2px}
+  .footer{text-align:center;padding:30px 20px;color:#8b949e;font-size:0.8rem;border-top:1px solid #21262d;margin-top:30px}
+  .footer a{color:#58a6ff;text-decoration:none}
+  .footer a:hover{text-decoration:underline}
+  .quick-hits{display:grid;grid-template-columns:1fr;gap:10px}
+  .quick-hit{background:#0d1117;border:1px solid #21262d;border-radius:8px;padding:12px 16px;display:flex;gap:10px;align-items:flex-start}
+  .quick-hit .bullet{color:#7ee787;font-weight:700}
+  .quick-hit .text{color:#c9d1d9;font-size:0.88rem}
+  @media(max-width:600px){.header h1{font-size:1.6rem}.container{padding:12px}.pricing-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
-<div class="container">
 
 <div class="header">
   <h1>🧠 Daily AI Digest</h1>
-  <div class="subtitle">Your curated briefing on artificial intelligence</div>
-  <div class="date">Sunday, July 19, 2026</div>
+  <div class="sub">Curated intelligence from the frontier of AI — July 20, 2026</div>
+  <div class="date-badge">Monday, July 20, 2026</div>
 </div>
 
-<!-- TOP STORY -->
-<div class="section">
-  <div class="section-title">🔥 Top Story</div>
-  <div class="highlight-box">
-    <h3>🚀 OpenAI GPT-5.6 Goes Public — Sol, Terra & Luna Now Available</h3>
-    <p style="color:#b0b0b0; font-size:0.9em; margin-top:6px;">
-      OpenAI's GPT-5.6 family — initially previewed in a government-gated release — <strong>opened to all users on July 9, 2026</strong>. The three-model lineup spans Luna (entry), Terra (balanced), and Sol (frontier), all with a 1M token context window and 128K max output tokens. On <em>Agents' Last Exam</em>, GPT-5.6 Sol scored <strong>53.6%</strong>, beating Claude Fable 5 by 13.1 points. Sol on Cerebras delivers up to <strong>750 tokens/sec</strong>. Luna ($1/$6 per MTok) and Terra ($2.50/$15) both outscore Fable 5 at roughly 1/16th the cost. The public rollout followed a national security review by the Trump administration.
-    </p>
-    <div style="margin-top:10px;">
-      <span class="badge badge-openai">OpenAI</span>
-      <span class="badge">Release</span>
-      <span class="badge">GPT-5.6</span>
-    </div>
-  </div>
-</div>
+<div class="container">
 
-<!-- HEADLINES -->
-<div class="section">
-  <div class="section-title">📰 Headlines</div>
+  <!-- ===== BREAKING ===== -->
+  <div class="section-title"><span class="emoji">🔥</span> Top Stories</div>
 
   <div class="card">
-    <h3>🧪 Claude Sonnet 4.6 Delivers Opus-Level Coding at Mid-Range Pricing</h3>
-    <div class="meta">Anthropic · February 2026 (still current flagship)</div>
-    <p>
-      Claude Sonnet 4.6 remains Anthropic's default model, achieving Opus-level performance on coding and computer use at <strong>$3/$15 per MTok</strong>. It features a 1M token context window, context compaction (beta), and a 70% preference rate over Sonnet 4.5 in Claude Code. OSWorld computer-use scores have improved 16x since 2024, approaching human-level on complex spreadsheets and multi-step web forms.
-    </p>
-    <div style="margin-top:8px;">
-      <span class="badge badge-anthropic">Anthropic</span>
-      <span class="badge">Claude Sonnet 4.6</span>
-      <span class="badge">Computer Use</span>
+    <h3><a href="https://apnews.com/article/kimi-k3-china-ai-0d8a5e268deb11a673f4d444fc597cc5" target="_blank">Moonshot AI Launches Kimi K3 — A 2.8 Trillion Parameter Open-Weight Model</a></h3>
+    <div class="meta">
+      <span class="source">AP News</span>
+      <span class="tag">Model Release</span>
+      <span class="tag">China AI</span>
+    </div>
+    <p>Chinese startup Moonshot AI has taken the industry by surprise with Kimi K3, a massive 2.8-trillion-parameter Mixture-of-Experts model boasting a 1-million-token context window. Released via API on July 16, the model scores 93.5% on GPQA Diamond, ranking competitively with Claude Opus 4.8 and GPT-5.5 on general intelligence while leading on several coding and agentic benchmarks — including #1 on Frontend Code Arena at launch.</p>
+    <div class="key-points">
+      <ul>
+        <li><strong>Architecture:</strong> ~2.8T param MoE with always-on reasoning and native vision</li>
+        <li><strong>Context:</strong> 1,048,576 tokens (1M) — flat-rate API pricing</li>
+        <li><strong>Open Weights:</strong> Full weights expected by July 27 under Modified MIT license</li>
+        <li><strong>Pricing:</strong> $3/MTok input, $15/MTok output, $0.30/MTok cached</li>
+        <li><strong>Variants:</strong> K3 Max (chat/single-agent) and K3 Swarm Max (multi-agent batch workloads)</li>
+      </ul>
     </div>
   </div>
 
   <div class="card">
-    <h3>🤖 xAI Launches Grok 4 & $300/Month SuperGrok Heavy Tier</h3>
-    <div class="meta">xAI · July 9, 2025 (1-year anniversary milestone)</div>
-    <p>
-      One year after launch, Grok 4 introduced 100x training improvements, multi-agent capabilities, and the premium <strong>SuperGrok Heavy ($300/mo)</strong> tier. The model shows strong academic benchmark performance and xAI has teased coding, multimodal, and video models on the roadmap. The announcement positioned Grok against OpenAI's then-upcoming GPT-5 series.
-    </p>
-    <div style="margin-top:8px;">
-      <span class="badge badge-xai">xAI</span>
-      <span class="badge">Grok 4</span>
-      <span class="badge">SuperGrok Heavy</span>
+    <h3><a href="https://techcrunch.com/2026/07/15/thinking-machines-amps-up-its-bet-against-one-size-fits-all-ai-with-its-first-open-model-inkling/" target="_blank">Mira Murati's Thinking Machines Lab Releases First Open Model: Inkling</a></h3>
+    <div class="meta">
+      <span class="source">TechCrunch</span>
+      <span class="tag">Model Release</span>
+      <span class="tag">Open Source</span>
+    </div>
+    <p>Thinking Machines Lab, the AI startup founded by former OpenAI CTO Mira Murati, has released Inkling — its first open-weights model after 18 months of behind-the-scenes development. Inkling is a multimodal model (text, image, audio in; text out) released under Apache 2.0, designed as a flexible, fine-tuneable alternative to monolithic frontier models. The company raised over $1B in initial funding and positions itself against the "one-size-fits-all" approach of competitors like OpenAI and Anthropic.</p>
+    <div class="key-points">
+      <ul>
+        <li><strong>License:</strong> Apache 2.0 — full open weights available immediately</li>
+        <li><strong>Philosophy:</strong> Customizable, specialized models over ever-larger general-purpose systems</li>
+        <li><strong>Benchmarks:</strong> Competitive on reasoning and coding tasks vs. other open models in its class</li>
+        <li><strong>Significance:</strong> First public proof point from one of the most anticipated AI startups</li>
+      </ul>
     </div>
   </div>
 
   <div class="card">
-    <h3>🌐 Google Gemini 3.5 Pro Delayed to July — Managed Agents Launch</h3>
-    <div class="meta">Google DeepMind · July 2026</div>
-    <p>
-      Google pushed its next frontier model, Gemini 3.5 Pro, to July for additional refinements. Meanwhile, <strong>Gemini 3.5 Flash</strong> is the latest broadly available release, and Google launched <strong>Managed Agents</strong> in the Gemini API (public preview) — autonomous, stateful agents running in Google-hosted Linux sandboxes. Gemini Omni has also been highlighted in public listings.
-    </p>
-    <div style="margin-top:8px;">
-      <span class="badge badge-google">Google</span>
-      <span class="badge">Gemini 3.5</span>
-      <span class="badge">Managed Agents</span>
+    <h3><a href="https://newsroom.amd.com/news/microsoft-azure-ai-infrastructure/" target="_blank">Microsoft & AMD Expand Partnership: Helios Rackscale Deployed on Azure</a></h3>
+    <div class="meta">
+      <span class="source">AMD Newsroom</span>
+      <span class="tag">Infrastructure</span>
+      <span class="tag">Cloud AI</span>
+    </div>
+    <p>AMD and Microsoft announced a major expansion of their strategic partnership today. Microsoft will deploy AMD's Helios Rackscale Solution — combining Instinct MI455X GPUs, EPYC "Venice" CPUs, Pensando DPUs, and ROCm software — to power frontier model AI inference on Azure. The collaboration also adds two new Azure VM series (HDv2 for agentic AI, HXv2 for semiconductor design) powered by 6th Gen AMD EPYC processors and deepens integration of AMD Pensando DPUs with Azure Boost for networking.</p>
+    <div class="key-points">
+      <ul>
+        <li><strong>Helios:</strong> Open, integrated rackscale platform shipping H2 2026</li>
+        <li><strong>Workloads:</strong> Frontier model inference, Azure AI Foundry, enterprise AI</li>
+        <li><strong>Quote from Lisa Su:</strong> "Extending partnership across the full stack of AMD AI solutions on Azure"</li>
+        <li><strong>Quote from Satya Nadella:</strong> "Expanding Azure infrastructure portfolio with AMD Helios for performance, scale and choice"</li>
+      </ul>
     </div>
   </div>
 
   <div class="card">
-    <h3>🏛️ US AI Regulation: 109 State AI Laws Enacted in 2026 So Far</h3>
-    <div class="meta">TechPolicy.Press · July 2026</div>
-    <p>
-      States have enacted <strong>109 AI laws</strong> and 28 data center laws as of July 1, 2026 (slightly behind 2025's pace). At the federal level, the July 2025 AI Action Plan, OMB procurement memoranda, and executive orders on AI accuracy (E.O. 14319) and export promotion of the American AI tech stack (E.O. 14320) continue shaping the landscape. The GAO reported federal generative AI use grew ninefold.
-    </p>
-    <div style="margin-top:8px;">
-      <span class="badge">Policy</span>
-      <span class="badge">Regulation</span>
-      <span class="badge">US</span>
+    <h3><a href="https://www.theguardian.com/technology/2026/jul/20/jeff-bezos-uk-government-invest-in-2bn-british-startup-cuspai" target="_blank">Jeff Bezos & UK Government Back CuspAI's $450M Round for AI Materials Discovery</a></h3>
+    <div class="meta">
+      <span class="source">Reuters / The Guardian</span>
+      <span class="tag">Funding</span>
+      <span class="tag">AI Science</span>
+    </div>
+    <p>British startup CuspAI has raised $450 million in Series B funding from Jeff Bezos, the UK government, and other investors at a $2.6 billion valuation. The company is building an AI-driven "search engine for rare materials" to accelerate discovery of new compounds for semiconductors and other critical technologies. 80% of near-term research is directed toward semiconductor materials.</p>
+    <div class="key-points">
+      <ul>
+        <li><strong>Round:</strong> $450M Series B at $2.6B valuation</li>
+        <li><strong>Focus:</strong> AI for materials discovery — semiconductors (80%), rare materials</li>
+        <li><strong>Notable:</strong> UK government's largest direct AI startup investment to date</li>
+      </ul>
     </div>
   </div>
+
+  <!-- ===== INDUSTRY & POLICY ===== -->
+  <div class="section-title"><span class="emoji">📋</span> Industry & Policy</div>
+
+  <div class="quick-hits">
+    <div class="quick-hit">
+      <span class="bullet">▸</span>
+      <span class="text"><strong>Japan Relaxes Privacy Laws for AI:</strong> Japan's government amended the Personal Information Protection Act, removing opt-in consent requirements for low-risk data sharing — aiming to position the country as the easiest place in the world to develop AI applications. Fines tied to profits from misuse.</span>
+    </div>
+    <div class="quick-hit">
+      <span class="bullet">▸</span>
+      <span class="text"><strong>Safetensors Joins PyTorch Foundation:</strong> Hugging Face's Safetensors — the de facto standard for secure model weight serialization — became a vendor-neutral, foundation-hosted project under the Linux Foundation alongside PyTorch, vLLM, DeepSpeed, and Ray (announced April 8 at PyTorch Conference EU).</span>
+    </div>
+    <div class="quick-hit">
+      <span class="bullet">▸</span>
+      <span class="text"><strong>MiniMax Raises $2B:</strong> Shanghai-based open-source AI developer MiniMax secured $2 billion in funding, underscoring continued investor appetite for Chinese AI startups despite geopolitical tensions.</span>
+    </div>
+    <div class="quick-hit">
+      <span class="bullet">▸</span>
+      <span class="text"><strong>Mozilla's State of Open Source AI v1:</strong> Mozilla published its first comprehensive report on the state of open-source AI, tracking rapid ecosystem growth and the surge in community-driven model development.</span>
+    </div>
+  </div>
+
+  <!-- ===== PERSPECTIVE ===== -->
+  <div class="section-title"><span class="emoji">💭</span> Analysis & Perspective</div>
 
   <div class="card">
-    <h3>🔓 Open-Source AI Race Heats Up: DeepSeek R2, Llama 4, Mistral Large 2</h3>
-    <div class="meta">Multiple Labs · July 2026</div>
-    <p>
-      The open-weight AI race is accelerating with <strong>DeepSeek R2</strong>, <strong>Llama 4</strong>, and <strong>Mistral Large 2</strong> competing in the open-source tier. DeepSeek's R1-based lineage continues to challenge leading models, while Kimi K3 (Moonshot AI, 1T param MoE, 32B activated) adds strong code and agent-task capabilities to the mix. OpenAI has also signaled an open-source push with a powerful, safe model.
-    </p>
-    <div style="margin-top:8px;">
-      <span class="badge">Open Source</span>
-      <span class="badge badge-meta">Meta</span>
-      <span class="badge">DeepSeek</span>
-      <span class="badge">Mistral</span>
+    <h3><a href="https://scitechdaily.com/why-ai-may-never-reach-human-intelligence/" target="_blank">Why AI May Never Reach Human Intelligence — The Tacit Knowledge Problem</a></h3>
+    <div class="meta">
+      <span class="source">SciTechDaily / Taylor & Francis</span>
+      <span class="tag">AGI</span>
+      <span class="tag">Philosophy</span>
+    </div>
+    <p>Computer scientist Peter J. Denning argues in a new paper, "Turing's Mistake," that AI systems cannot achieve human-level intelligence because they cannot acquire tacit knowledge — the unarticulated understanding behind common sense, intuition, practical skill, and cultural context. He points to the 40-year Cyc project, which after 25 million entries still couldn't give expert systems sufficient common sense. Denning warns that this limitation makes advanced AI both fundamentally different from humans and potentially dangerous to align.</p>
+    <div class="key-points">
+      <ul>
+        <li>Five forms of tacit knowledge elude ML: common sense, everyday interactions, feelings/perceptions, practical skills, cultural/historical background</li>
+        <li>"Know what" ≠ "know how" — embodied skill knowledge cannot be encoded as bits</li>
+        <li>Controversial thesis that Turing's 1950 framing sent AI research in the wrong direction</li>
+      </ul>
     </div>
   </div>
-</div>
 
-<!-- PRICING SNAPSHOT -->
-<div class="section">
-  <div class="section-title">💰 Pricing Snapshot</div>
-  <p style="color:#888; font-size:0.8em; margin-bottom:12px;">Prices per million tokens (input / output). Context windows vary.</p>
-  <table class="pricing-table">
-    <thead>
-      <tr><th>Provider</th><th>Model</th><th>Input</th><th>Output</th><th>Context</th></tr>
-    </thead>
-    <tbody>
-      <tr><td class="price-green">OpenAI</td><td>GPT-5.6 Sol</td><td>$5</td><td class="price-yellow">$30</td><td>1M</td></tr>
-      <tr><td class="price-green">OpenAI</td><td>GPT-5.6 Terra</td><td>$2.50</td><td>$15</td><td>1M</td></tr>
-      <tr><td class="price-green">OpenAI</td><td>GPT-5.6 Luna</td><td>$1</td><td>$6</td><td>1M</td></tr>
-      <tr><td class="price-green">OpenAI</td><td>GPT-4.1</td><td>$2</td><td>$8</td><td>1M</td></tr>
-      <tr><td class="price-green">OpenAI</td><td>GPT-4.1-mini</td><td>$0.40</td><td>$1.60</td><td>1M</td></tr>
-      <tr><td class="price-green">OpenAI</td><td>GPT-4.1-nano</td><td>$0.10</td><td>$0.40</td><td>1M</td></tr>
-      <tr><td class="price-green">OpenAI</td><td>o3 (reasoning)</td><td>$10</td><td>$40</td><td>—</td></tr>
-      <tr><td class="price-green">OpenAI</td><td>o4-mini (reasoning)</td><td>$1.10</td><td>$4.40</td><td>—</td></tr>
-      <tr><td class="price-purple">Anthropic</td><td>Claude Opus 4</td><td>$15</td><td>$75</td><td>200K</td></tr>
-      <tr><td class="price-purple">Anthropic</td><td>Claude Sonnet 4.6</td><td>$4</td><td>$16</td><td>1M</td></tr>
-      <tr><td class="price-purple">Anthropic</td><td>Claude Haiku 3.5</td><td>$1</td><td>$5</td><td>200K</td></tr>
-      <tr><td class="price-blue">Google</td><td>Gemini 3.5 Flash</td><td>$0.30</td><td>$1.20</td><td>1M</td></tr>
-      <tr><td class="price-blue">Google</td><td>Gemini 2.5 Pro</td><td>$1.25</td><td>$5</td><td>2M</td></tr>
-    </tbody>
-  </table>
-  <p style="color:#666; font-size:0.75em; margin-top:8px;">
-    ✦ Grok models available via xAI API (tiered subscriptions from $30 to $300/mo).
-    DeepSeek and open-weight models offer significantly lower pricing.
-  </p>
-</div>
+  <!-- ===== MODEL PRICING ===== -->
+  <div class="section-title"><span class="emoji">💰</span> Model Pricing Reference</div>
 
-<!-- KEY NUMBERS -->
-<div class="section">
-  <div class="section-title">📊 Key Numbers</div>
-  <div class="stats-grid">
-    <div class="stat-card">
-      <div class="value">53.6<span class="unit">%</span></div>
-      <div class="label">GPT-5.6 Sol on Agents' Last Exam (beats Fable 5 by 13.1 pts)</div>
+  <div class="pricing-grid">
+
+    <div class="pricing-card">
+      <div class="provider">OpenAI</div>
+      <div class="model-name">GPT-5.5 Pro</div>
+      <div class="price">$30/MTok input</div>
     </div>
-    <div class="stat-card">
-      <div class="value">750</div>
-      <div class="label">Tokens/sec — GPT-5.6 Sol on Cerebras</div>
+    <div class="pricing-card">
+      <div class="provider">OpenAI</div>
+      <div class="model-name">o3 (reasoning)</div>
+      <div class="price">$10 / $40 MTok</div>
     </div>
-    <div class="stat-card">
-      <div class="value">109</div>
-      <div class="label">State AI laws enacted in the US in 2026</div>
+    <div class="pricing-card">
+      <div class="provider">OpenAI</div>
+      <div class="model-name">o4-mini (reasoning)</div>
+      <div class="price">$1.10 / $4.40 MTok</div>
     </div>
-    <div class="stat-card">
-      <div class="value">9×</div>
-      <div class="label">Federal gen AI use growth (GAO report)</div>
+    <div class="pricing-card">
+      <div class="provider">OpenAI</div>
+      <div class="model-name">GPT-4.1 / mini / nano</div>
+      <div class="price">$2/$8 · $0.40/$1.60 · $0.10/$0.40 MTok</div>
     </div>
-    <div class="stat-card">
-      <div class="value">1M</div>
-      <div class="label">Token context window (GPT-5.6 & Sonnet 4.6)</div>
+    <div class="pricing-card">
+      <div class="provider">OpenAI</div>
+      <div class="model-name">GPT-4o / 4o-mini</div>
+      <div class="price">$2.50/$10 · $0.15/$0.60 MTok</div>
     </div>
-    <div class="stat-card">
-      <div class="value">$300</div>
-      <div class="label">SuperGrok Heavy monthly subscription</div>
+    <div class="pricing-card">
+      <div class="provider">OpenAI</div>
+      <div class="model-name">o1 / o1-mini / o1-pro</div>
+      <div class="price">$15/$60 · $1.10/$4.40 · $150/$600 MTok</div>
     </div>
+    <div class="pricing-card">
+      <div class="provider">OpenAI</div>
+      <div class="model-name">DALL-E 3 · TTS-1 · Whisper</div>
+      <div class="price">$0.040/img · $15/MTok · $0.006/min</div>
+    </div>
+    <div class="pricing-card">
+      <div class="provider">Anthropic</div>
+      <div class="model-name">Claude Opus 4</div>
+      <div class="price">$15 / $75 MTok</div>
+    </div>
+    <div class="pricing-card">
+      <div class="provider">Anthropic</div>
+      <div class="model-name">Claude Sonnet 4</div>
+      <div class="price">$4 / $16 MTok</div>
+    </div>
+    <div class="pricing-card">
+      <div class="provider">Anthropic</div>
+      <div class="model-name">Claude Haiku 3.5</div>
+      <div class="price">$1 / $5 MTok</div>
+    </div>
+    <div class="pricing-card">
+      <div class="provider">Moonshot AI</div>
+      <div class="model-name">Kimi K3 (new)</div>
+      <div class="price">$3 / $15 / $0.30 cached MTok</div>
+    </div>
+
   </div>
+
+  <!-- ===== FOOTER ===== -->
+  <div class="footer">
+    <p>🧠 Daily AI Digest · July 20, 2026 · Curated by Hermes Agent</p>
+    <p style="margin-top:4px">Sources: AP News, TechCrunch, AMD Newsroom, Reuters, The Guardian, SciTechDaily, SiliconAngle</p>
+    <p style="margin-top:8px"><a href="https://pradykar.com">pradykar.com</a></p>
+  </div>
+
 </div>
 
-<!-- NOTABLE DEVELOPMENTS -->
-<div class="section">
-  <div class="section-title">🔬 Research & Developments</div>
-
-  <div class="card">
-    <h3>OpenAI's New API Features: Programmatic Tool Calling & Multi-Agent</h3>
-    <div class="meta">OpenAI · July 9, 2026</div>
-    <p>
-      GPT-5.6 introduces <strong>programmatic tool calling</strong> (models compose and run JavaScript that orchestrates tool calls), <strong>multi-agent sub-agents</strong> for parallel focused work, and <strong>prompt cache breakpoints</strong> (explicit cache control matching Anthropic's model). Image processing now supports <code>detail: original</code> to avoid resizing.
-    </p>
-  </div>
-
-  <div class="card">
-    <h3>AI Computer Use Progress: 16 Months of Rapid Gains</h3>
-    <div class="meta">OSWorld Benchmark · July 2025-2026</div>
-    <p>
-      The OSWorld benchmark for AI computer use shows steady improvements across Claude Sonnet generations. OSWorld-Verified (released July 2025) upgraded task quality and grading infrastructure. Sonnet 4.6 now approaches human-level capability on navigating complex spreadsheets and multi-step web forms across multiple browser tabs — a 16x improvement since October 2024.
-    </p>
-  </div>
-</div>
-
-<!-- QUICK HITS -->
-<div class="section">
-  <div class="section-title">⚡ Quick Hits</div>
-
-  <div class="card" style="padding: 12px 18px;">
-    <p style="font-size:0.88em;">
-      <span class="badge badge-xai">xAI</span> <strong>Grok 4.20</strong> teased on roadmap — coding, multimodal, and video models coming next.
-    </p>
-  </div>
-  <div class="card" style="padding: 12px 18px;">
-    <p style="font-size:0.88em;">
-      <span class="badge badge-openai">OpenAI</span> <strong>GPT-5.5 Pro</strong> listed at $30/MTok input — remains available as a premium tier.
-    </p>
-  </div>
-  <div class="card" style="padding: 12px 18px;">
-    <p style="font-size:0.88em;">
-      <span class="badge badge-google">Google</span> <strong>AI Expanded Access</strong> licenses getting higher usage limits for Gemini in Sheets starting July 15.
-    </p>
-  </div>
-  <div class="card" style="padding: 12px 18px;">
-    <p style="font-size:0.88em;">
-      <span class="badge">EU</span> EU published a voluntary <strong>AI Code of Practice</strong> for general-purpose AI — shaping compliance frameworks this year.
-    </p>
-  </div>
-</div>
-
-<div class="footer">
-  <p>🧠 Daily AI Digest · pradykar.com · July 19, 2026</p>
-  <p style="margin-top:4px;">Curated by Hermes Agent · Data sourced from official announcements and trusted outlets</p>
-  <p style="margin-top:4px;">📬 Want this delivered to your inbox? Set up a cron job with Hermes Agent.</p>
-</div>
-
-</div>
 </body>
 </html>
